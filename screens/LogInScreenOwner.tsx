@@ -136,7 +136,6 @@ const styles = StyleSheet.create({
   },
   forgotPassword: {
     marginLeft: -52.5,
-    textDecoration: "underline",
     color: Color.colorIndigo_100,
     fontSize: FontSize.ptReguler_size,
   },
