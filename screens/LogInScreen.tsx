@@ -119,7 +119,6 @@ const styles = StyleSheet.create({
   },
   signUp: {
     marginLeft: 45.5,
-    // textDecoration: "underline",
     top: 0,
     fontSize: FontSize.ptReguler_size,
     textAlign: "left",
