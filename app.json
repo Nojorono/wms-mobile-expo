@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "artixpos_-_point_of_sales_(app)",
-    "slug": "artixpos_-_point_of_sales_(app)",
+    "slug": "artixpos-staging",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -24,13 +24,20 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.staging.artixpos"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
     "plugins": [
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "8ade3a32-1df4-4ce2-95f6-ccf17acb984e"
+      }
+    },
+    "owner": "sifuxxx"
   }
 }
