@@ -57,13 +57,6 @@ const LogInScreen = () => {
         contentFit="cover"
         source={require("../assets/union.png")}
       />
-      {/* <ArrowBackButton
-        arrowBackButtonPosition="absolute"
-        arrowBackButtonMarginLeft={-163.5}
-        arrowBackButtonTop={40}
-        arrowBackButtonLeft="50%"
-        rectangleViewBackgroundColor="#441480"
-      /> */}
     </View>
   );
 };

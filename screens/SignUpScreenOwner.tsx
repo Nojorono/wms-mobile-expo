@@ -9,14 +9,6 @@ import { Color, FontFamily, Border, FontSize } from "../GlobalStyles";
 const SignUpScreenOwner = () => {
   return (
     <View style={styles.signUpScreenOwner}>
-      {/* <View style={[styles.rectangleParent, styles.groupChildLayout]}>
-        <View style={[styles.groupChild, styles.groupChildLayout]} />
-        <Image
-          style={[styles.lineIcon, styles.iconPosition]}
-          contentFit="cover"
-          source={require("../assets/line.png")}
-        />
-      </View> */}
       <Text style={[styles.signUp, styles.iconPosition]}>Sign Up</Text>
       <ButtonFill
         continue1="Login"
