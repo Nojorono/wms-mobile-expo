@@ -12,14 +12,6 @@ import { FontSize, FontFamily, Border, Color } from "../GlobalStyles";
 const LogInScreenOwner = () => {
   return (
     <View style={styles.logInScreenOwner}>
-      <View style={styles.rectangleParent}>
-        <View style={styles.groupChild} />
-        <Image
-          style={styles.lineIcon}
-          contentFit="cover"
-          source={require("../assets/line.png")}
-        />
-      </View>
       <Text style={styles.logInAs}>Log in as Owner</Text>
       <ButtonFill
         continue1="Login"
