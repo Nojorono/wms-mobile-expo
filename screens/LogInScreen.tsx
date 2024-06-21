@@ -9,11 +9,9 @@ import { useNavigation } from "@react-navigation/native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 
 type RootStackParamList = {
-  HelloScreen: undefined;
   LogInScreen: undefined;
   LogInScreenOwner: undefined;
   LogInScreenEmployee: undefined;
-  SignUpScreenOwner: undefined;
 };
 
 type LogInScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "LogInScreen">;
