@@ -4,8 +4,29 @@ import { Image } from "expo-image";
 import ButtonFill from "../components/ButtonFill";
 import ArrowBackButton from "../components/ArrowBackButton";
 import { FontFamily, Color, FontSize } from "../GlobalStyles";
+import LogInScreenEmployee from "./LogInScreenEmployee";
+import { useNavigation } from "@react-navigation/native";
+import { NativeStackNavigationProp } from "@react-navigation/native-stack";
+
+type RootStackParamList = {
+  HelloScreen: undefined;
+  LogInScreen: undefined;
+  LogInScreenOwner: undefined;
+  LogInScreenEmployee: undefined;
+  SignUpScreenOwner: undefined;
+};
+
+type LogInScreenNavigationProp = NativeStackNavigationProp<RootStackParamList, "LogInScreen">;
 
 const LogInScreen = () => {
+  const navigation = useNavigation<LogInScreenNavigationProp>();
+
+  const handleLoginOwner = () => {
+    navigation.navigate("LogInScreenOwner");
+  };
+  const handleLoginEmployee = () => {
+    navigation.navigate("LogInScreenEmployee");
+  }
   return (
     <View style={styles.logInScreen}>
       <Text style={styles.logIn}>Log in</Text>
@@ -34,6 +55,7 @@ const LogInScreen = () => {
         button1BackgroundColor="#441480"
         continueLeft="31.19%"
         continueTextAlign="center"
+        onPress={handleLoginOwner}
       />
       <ButtonFill
         continue1="Log in as Employee"
@@ -45,6 +67,7 @@ const LogInScreen = () => {
         button1BackgroundColor="#441480"
         continueLeft="27.52%"
         continueTextAlign="center"
+        onPress={handleLoginEmployee}
       />
       <Text style={[styles.or, styles.orPosition]}>Or</Text>
       <Image

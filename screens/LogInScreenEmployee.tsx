@@ -7,14 +7,6 @@ import { FontFamily, Color, FontSize, Border } from "../GlobalStyles";
 const LogInScreenEmployee = () => {
   return (
     <View style={styles.logInScreenEmployee}>
-      <View style={styles.rectangleParent}>
-        <View style={styles.groupChild} />
-        <Image
-          style={[styles.lineIcon, styles.logInAsPosition]}
-          contentFit="cover"
-          source={require("../assets/line.png")}
-        />
-      </View>
       <Text style={[styles.logInAs, styles.logInAsTypo]}>
         Log in as Employee
       </Text>
