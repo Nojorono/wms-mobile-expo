@@ -6,9 +6,10 @@ export const FontFamily = {
 /* font sizes */
 export const FontSize = {
   ptReg_size: 16,
-  ptMedium_size: 24,
+  ptMedium_size: 18,
   ptReguler_size: 12,
-  ptMedium1_size: 22,
+  ptMedium1_size: 20,
+  ptSmall_size: 12,
 };
 /* Colors */
 export const Color = {

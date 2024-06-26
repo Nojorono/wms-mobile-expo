@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
   },
   missedCall: {
     fontSize: FontSize.ptReguler_size,
-    fontWeight: "500",
+    fontWeight: "400",
     fontFamily: FontFamily.ptMedium,
     color: Color.navy,
     textAlign: "left",

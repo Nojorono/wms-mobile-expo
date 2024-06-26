@@ -10,8 +10,6 @@ import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 type RootStackParamList = {
   HelloScreen: undefined;
   LogInScreen: undefined;
-  LogInScreenOwner: undefined;
-  LogInScreenEmployee: undefined;
   SignUpScreenOwner: undefined;
 };
 
