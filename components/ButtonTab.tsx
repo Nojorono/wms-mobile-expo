@@ -76,7 +76,7 @@ const styles = StyleSheet.create({
   },
   email: {
     fontSize: FontSize.ptReguler_size,
-    fontWeight: "500",
+    fontWeight: "300",
     fontFamily: FontFamily.ptMedium,
     color: Color.colorWhite,
     textAlign: "left",
