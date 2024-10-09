@@ -28,7 +28,7 @@ const HelloScreen = () => {
   return (
     <View style={styles.helloScreen}>
       <View style={[styles.artixposWrapper, styles.artixposPosition]}>
-        <Text style={[styles.artixpos, styles.artixposTypo]}>ArtixPOS.</Text>
+        {/*<Text style={[styles.artixpos, styles.artixposTypo]}>ArtixPOS.</Text>*/}
       </View>
       <Image
         style={[styles.helloScreenChild, styles.helloScreenChildPosition]}
@@ -36,7 +36,7 @@ const HelloScreen = () => {
         source={require("../assets/group-6.png")}
       />
       <Text style={[styles.easyManagementFor, styles.helloScreenChildPosition]}>
-        Easy Management for your Store.
+        Exceed Internal Application SIO
       </Text>
       <View style={styles.rectangleParent}>
         <View style={styles.groupChild} />
@@ -44,28 +44,28 @@ const HelloScreen = () => {
         <View style={[styles.groupInner, styles.groupPosition]} />
       </View>
       <ButtonFill
-        continue1="Create new account"
+        continue1="Login"
         buttonFillPosition="absolute"
         buttonFillMarginLeft={-163.5}
         buttonFillBottom={127}
         buttonFillLeft="50%"
         buttonFillTop="unset"
         button1BackgroundColor="#441480"
-        continueLeft="26.3%"
+        continueLeft="44%"
         continueTextAlign="left"
-        onPress={handlePressSignUp}
-      />
-      <ButtonNonFill
-        buttonNonFillPosition="absolute"
-        buttonNonFillMarginLeft={-163.5}
-        buttonNonFillBottom={50}
-        buttonNonFillLeft="50%"
-        buttonNonFillWidth={327}
-        buttonNonFillHeight={57}
-        button1BorderColor="#441480"
-        continueColor="#441480"
         onPress={handlePressLogin}
       />
+      {/*<ButtonNonFill*/}
+      {/*  buttonNonFillPosition="absolute"*/}
+      {/*  buttonNonFillMarginLeft={-163.5}*/}
+      {/*  buttonNonFillBottom={50}*/}
+      {/*  buttonNonFillLeft="50%"*/}
+      {/*  buttonNonFillWidth={327}*/}
+      {/*  buttonNonFillHeight={57}*/}
+      {/*  button1BorderColor="#441480"*/}
+      {/*  continueColor="#441480"*/}
+      {/*  onPress={handlePressLogin}*/}
+      {/*/>*/}
       <Image
         style={[styles.logoSegitiga1Icon, styles.artixposPosition]}
         contentFit="cover"
@@ -77,8 +77,7 @@ const HelloScreen = () => {
 
 const styles = StyleSheet.create({
   artixposPosition: {
-    left: "50%",
-    position: "absolute",
+    left: "40%",
   },
   artixposTypo: {
     fontFamily: FontFamily.ptMedium,
@@ -86,7 +85,7 @@ const styles = StyleSheet.create({
   },
   helloScreenChildPosition: {
     top: "50%",
-    left: "50%",
+    left: "20%",
     position: "absolute",
   },
   groupPosition: {
@@ -109,20 +108,19 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   artixposWrapper: {
-    marginLeft: -28.5,
     top: 64,
     width: 112,
     height: 28,
   },
   helloScreenChild: {
     marginTop: -209,
-    marginLeft: -128.5,
+    // marginLeft: -128.5,
     width: 256,
     height: 284,
   },
   easyManagementFor: {
     marginTop: 115,
-    marginLeft: -127.5,
+    marginLeft: 25,
     fontSize: FontSize.ptReg_size,
     color: Color.navy,
     textAlign: "center",
@@ -156,10 +154,9 @@ const styles = StyleSheet.create({
     position: "absolute",
   },
   logoSegitiga1Icon: {
-    marginLeft: -81.5,
     top: 46,
-    width: 49,
-    height: 46,
+    width: 90,
+    height: 90,
   },
   helloScreen: {
     backgroundColor: Color.colorWhite,

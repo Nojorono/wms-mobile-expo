@@ -7,6 +7,7 @@ import LogInScreen from "./screens/LogInScreen";
 import LogInScreenOwner from "./screens/LogInScreenOwner";
 import LogInScreenEmployee from "./screens/LogInScreenEmployee";
 import SignUpScreenOwner from "./screens/SignUpScreenOwner";
+import Toast from 'react-native-toast-message';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +32,10 @@ const App = () => {
           <Stack.Screen name="SignUpScreenOwner" component={SignUpScreenOwner} />
         </Stack.Navigator>
       </NavigationContainer>
+      <Toast
+          position='top'
+          bottomOffset={20}
+      />
     </>
   );
 };
