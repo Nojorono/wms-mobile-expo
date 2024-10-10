@@ -21,8 +21,7 @@ export const signin = async (data: SigninData): Promise<any> => {
       throw new Error("Failed to sign up");
     }
 
-    const responseData = await response.json();
-    return responseData;
+    return await response.json();
   } catch (error) {
     console.error("Error signing up:", (error as Error).message);
     throw error as Error;

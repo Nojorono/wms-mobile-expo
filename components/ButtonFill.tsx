@@ -1,6 +1,9 @@
 import React, { useMemo } from "react";
-import { StyleSheet, View, Text, TouchableOpacity } from "react-native";
+import { StyleSheet, View, Text, TouchableOpacity, Dimensions } from "react-native";
 import { Border, Color, FontSize, FontFamily } from "../GlobalStyles";
+
+// Get screen width for dynamic styling
+const { width: SCREEN_WIDTH } = Dimensions.get("window");
 
 export type ButtonFillType = {
   continue1?: string;
@@ -21,18 +24,19 @@ const getStyleValue = (key: string, value: string | number | undefined) => {
   if (value === undefined) return;
   return { [key]: value === "unset" ? undefined : value };
 };
+
 const ButtonFill = ({
-  continue1,
-  buttonFillPosition,
-  buttonFillMarginLeft,
-  buttonFillBottom,
-  buttonFillLeft,
-  buttonFillTop,
-  button1BackgroundColor,
-  continueLeft,
-  continueTextAlign,
-  onPress
-}: ButtonFillType) => {
+                      continue1,
+                      buttonFillPosition,
+                      buttonFillMarginLeft,
+                      buttonFillBottom,
+                      buttonFillLeft,
+                      buttonFillTop,
+                      button1BackgroundColor,
+                      continueLeft,
+                      continueTextAlign,
+                      onPress,
+                    }: ButtonFillType) => {
   const buttonFillStyle = useMemo(() => {
     return {
       ...getStyleValue("position", buttonFillPosition),
@@ -41,13 +45,7 @@ const ButtonFill = ({
       ...getStyleValue("left", buttonFillLeft),
       ...getStyleValue("top", buttonFillTop),
     };
-  }, [
-    buttonFillPosition,
-    buttonFillMarginLeft,
-    buttonFillBottom,
-    buttonFillLeft,
-    buttonFillTop,
-  ]);
+  }, [buttonFillPosition, buttonFillMarginLeft, buttonFillBottom, buttonFillLeft, buttonFillTop]);
 
   const button1Style = useMemo(() => {
     return {
@@ -63,10 +61,10 @@ const ButtonFill = ({
   }, [continueLeft, continueTextAlign]);
 
   return (
-    <TouchableOpacity onPress={onPress} style={[styles.buttonFill, buttonFillStyle]}>
-      <View style={[styles.button1, button1Style]} />
-      <Text style={[styles.continue, continueStyle]}>{continue1}</Text>
-    </TouchableOpacity>
+      <TouchableOpacity onPress={onPress} style={[styles.buttonFill, buttonFillStyle]}>
+        <View style={[styles.button1, button1Style]} />
+        <Text style={[styles.continue, continueStyle]}>{continue1}</Text>
+      </TouchableOpacity>
   );
 };
 
@@ -74,10 +72,10 @@ const styles = StyleSheet.create({
   button1: {
     height: "100%",
     width: "100%",
-    top: "0%",
-    right: "0%",
-    bottom: "0%",
-    left: "0%",
+    top: 0,
+    right: 0,
+    bottom: 0,
+    left: 0,
     borderRadius: Border.br_base,
     backgroundColor: Color.colorRoyalblue_100,
     position: "absolute",
@@ -89,12 +87,12 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     fontFamily: FontFamily.ptMedium,
     color: Color.colorWhite,
-    textAlign: "left",
     position: "absolute",
   },
   buttonFill: {
-    width: 327,
-    height: 57,
+    width: SCREEN_WIDTH * 0.85, // Use 85% of screen width for better responsiveness
+    height: 57,                // Fixed height, can be adjusted dynamically if needed
+    alignSelf: "center",        // Centers button horizontally
   },
 });
 

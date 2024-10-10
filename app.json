@@ -1,13 +1,13 @@
 {
   "expo": {
-    "name": "artixpos_-_point_of_sales_(app)",
-    "slug": "artixpos-staging",
+    "name": "wms_nojorono_(app)",
+    "slug": "wms_nojorono-staging",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./assets/logo-nojorono-biru-2.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -25,7 +25,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "com.staging.artixpos"
+      "package": "com.wms.nojorono"
     },
     "web": {
       "favicon": "./assets/favicon.png"
