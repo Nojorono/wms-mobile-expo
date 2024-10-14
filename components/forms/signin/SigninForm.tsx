@@ -29,7 +29,7 @@ const SigninForm: React.FC<SigninFormProps> = ({ onSigninSuccess }) => {
   };
 
   const validatePassword = (input: string) => {
-    isValid =  !!input && input.length >= 5;
+    isValid = !!input && input.length >= 5;
     setPasswordValid(isValid);
   };
 
@@ -72,77 +72,77 @@ const SigninForm: React.FC<SigninFormProps> = ({ onSigninSuccess }) => {
   };
 
   return (
-      <KeyboardAvoidingView
-          style={styles.container}
-          behavior={Platform.OS === "ios" ? "padding" : undefined}
-          keyboardVerticalOffset={Platform.OS === "ios" ? 50 : 0}
-      >
-        {/* Email Field */}
-        <Image
-            style={styles.mainImage}
-            contentFit="cover"
-            source={require("../../../assets/logo-nojorono.png")}
-        />
-        <View style={styles.fieldContainer}>
-          <Text style={[styles.label, styles.text]}>Email</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-                style={[styles.input, styles.text]}
-                value={email}
-                onChangeText={handleEmailChange}
-                placeholder="Enter your email"
-                keyboardType="email-address"
-                autoCapitalize="none"
-            />
-          </View>
-          {!emailValid && (
-              <Text style={styles.errorText}>
-                Please enter a valid email address
-              </Text>
-          )}
+    <KeyboardAvoidingView
+      style={styles.container}
+      behavior={Platform.OS === "ios" ? "padding" : undefined}
+      keyboardVerticalOffset={Platform.OS === "ios" ? 50 : 0}
+    >
+      {/* Email Field */}
+      <Image
+        style={styles.mainImage}
+        contentFit="cover"
+        source={require("../../../assets/logo-nojorono.png")}
+      />
+      <View style={styles.fieldContainer}>
+        <Text style={[styles.label, styles.text]}>Email</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={[styles.input, styles.text]}
+            value={email}
+            onChangeText={handleEmailChange}
+            placeholder="Enter your email"
+            keyboardType="email-address"
+            autoCapitalize="none"
+          />
         </View>
+        {!emailValid && (
+          <Text style={styles.errorText}>
+            Please enter a valid email address
+          </Text>
+        )}
+      </View>
 
-        {/* Password Field */}
-        <View style={styles.fieldContainer}>
-          <Text style={[styles.label, styles.text]}>Password</Text>
-          <View style={styles.inputContainer}>
-            <TextInput
-                style={[styles.input, styles.text]}
-                value={password}
-                onChangeText={handlePasswordChange}
-                placeholder="Enter your password"
-                secureTextEntry={!passwordVisible}
+      {/* Password Field */}
+      <View style={styles.fieldContainer}>
+        <Text style={[styles.label, styles.text]}>Password</Text>
+        <View style={styles.inputContainer}>
+          <TextInput
+            style={[styles.input, styles.text]}
+            value={password}
+            onChangeText={handlePasswordChange}
+            placeholder="Enter your password"
+            secureTextEntry={!passwordVisible}
+          />
+          <TouchableOpacity onPress={togglePasswordVisibility}>
+            <Image
+              style={styles.eyeIcon}
+              contentFit="cover"
+              source={require("../../../assets/eye-closed.png")}
             />
-            <TouchableOpacity onPress={togglePasswordVisibility}>
-              <Image
-                  style={styles.eyeIcon}
-                  contentFit="cover"
-                  source={require("../../../assets/eye-closed.png")}
-              />
-            </TouchableOpacity>
-          </View>
-          {!passwordValid && (
-              <Text style={styles.errorText}>
-                Password must be at least 8 characters long
-              </Text>
-          )}
+          </TouchableOpacity>
         </View>
+        {!passwordValid && (
+          <Text style={styles.errorText}>
+            Password must be at least 8 characters long
+          </Text>
+        )}
+      </View>
 
-        {/* Submit Button */}
-        <ButtonFill
-            continue1="Login"
-            buttonFillPosition="relative"
-            button1BackgroundColor="#0c4ca3"
-            continueTextAlign="center"
-            continueLeft="44%"
-            onPress={handleSubmit}
-        />
+      {/* Submit Button */}
+      <ButtonFill
+        continue1="Login"
+        buttonFillPosition="relative"
+        button1BackgroundColor="#0c4ca3"
+        continueTextAlign="center"
+        continueLeft="44%"
+        onPress={handleSubmit}
+      />
 
-        {/* Forgot Password */}
-        <TouchableOpacity>
-          <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
-        </TouchableOpacity>
-      </KeyboardAvoidingView>
+      {/* Forgot Password */}
+      <TouchableOpacity>
+        <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+      </TouchableOpacity>
+    </KeyboardAvoidingView>
   );
 };
 
@@ -150,7 +150,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    paddingTop : 50,
+    paddingTop: 50,
     // justifyContent: "center",
     padding: 30,
     backgroundColor: Color.colorWhite,
@@ -195,7 +195,7 @@ const styles = StyleSheet.create({
     marginTop: 20,
   },
   mainImage: {
-    width: 210, // 60% of screen width
+    width: 180, // 60% of screen width
     height: SCREEN_HEIGHT * 0.11, // 35% of screen height
     marginBottom: SCREEN_HEIGHT * 0.02, // 10% of screen height
   },

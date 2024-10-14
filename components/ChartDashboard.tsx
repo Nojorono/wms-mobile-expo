@@ -74,15 +74,19 @@ const ChartDashboard = () => {
 const styles = StyleSheet.create({
     container: {
         paddingVertical: 1,
-        backgroundColor: '#34448B',
+        // backgroundColor: '#34448B',
+        // backgroundColor: 'red',
         flex: 1,
         borderRadius: 20,
     },
     chartContainer: {
-        margin: 10,
+        // margin: 20,
         padding: 5,
         borderRadius: 20,
         backgroundColor: '#232B5D',
+        bottom: 10,
+        height: '100%',
+        width: '100%'
     },
     title: {
         color: 'white',
@@ -92,7 +96,7 @@ const styles = StyleSheet.create({
         marginBottom: 10,
     },
     chartWrapper: {
-        padding: 20,
+        padding: 10,
         alignItems: 'center',
     },
     centerLabel: {

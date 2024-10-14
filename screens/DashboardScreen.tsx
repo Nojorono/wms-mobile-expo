@@ -1,5 +1,5 @@
 import * as React from "react";
-import {Text, StyleSheet, View, Dimensions, SafeAreaView, FlatList, TouchableOpacity} from "react-native";
+import { Text, StyleSheet, View, Dimensions, SafeAreaView, FlatList, TouchableOpacity } from "react-native";
 import { Image } from "expo-image";
 import ButtonFill from "../components/ButtonFill";
 import { FontFamily, Color, Border, FontSize } from "../GlobalStyles";
@@ -66,7 +66,7 @@ const DashboardScreen = () => {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.container}>
-                <ChartDashboard/>
+                <ChartDashboard />
             </View>
             <View style={styles.container}>
                 <Text style={styles.title}>Order List</Text>
